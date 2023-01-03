@@ -34,9 +34,9 @@
  - [x] Loop (for..of) [바로가기](https://github.com/simseonbeom/core-javascript/blob/01.core/client/chapter/core/09-5.loop.js)
  ---
  ### Function
- - [ ] Function (Declaration) [바로가기](https://github.com/simseonbeom/core-javascript/blob/01.core/client/chapter/core/10-1.function.js)
- - [ ] Function (Expression) [바로가기](https://github.com/simseonbeom/core-javascript/blob/01.core/client/chapter/core/10-2.function.js)
- - [ ] Function (arrow-function) [바로가기](https://github.com/simseonbeom/core-javascript/blob/01.core/client/chapter/core/10-3.function.js)
+ - [x] Function (Declaration) [바로가기](https://github.com/simseonbeom/core-javascript/blob/01.core/client/chapter/core/10-1.function.js)
+ - [x] Function (Expression) [바로가기](https://github.com/simseonbeom/core-javascript/blob/01.core/client/chapter/core/10-2.function.js)
+ - [x] Function (arrow-function) [바로가기](https://github.com/simseonbeom/core-javascript/blob/01.core/client/chapter/core/10-3.function.js)
  - [ ] Function (recursive) [바로가기](https://github.com/simseonbeom/core-javascript/blob/01.core/client/chapter/core/10-4.function.js)
  ---
  ### Object
