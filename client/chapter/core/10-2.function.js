@@ -103,13 +103,108 @@ let namedFunctionExpression = function hello (){ };
 
 
 
-// 콜백 함수 (표현)식
-let callbackFunctionExpression;
 
+// 콜백 함수 (표현)식
+let callbackFunctionExpression = function (url,resolve,reject){
+  
+  // if(typeof url === 'string' && url.includes('http') && url.includes('www')){
+  if(typeof url === 'string' && url.match(/http.+www/)){
+    resolve(url)
+  }else{
+    reject()
+  }
+  
+};
+
+
+callbackFunctionExpression(
+  'https://www.naver.com',
+  function (url){
+    console.log(`${url} 해당 페이지로 이동합니다.`);
+  },
+  function (){
+    throw new Error('url 입력 정보가 올바르지 않습니다.')
+  }
+)
+  
+
+
+
+/* forEach는 내부에 이런 식으로 구현되어 있을려나요? 
+forEach(function(currentValue, index, array){}, thisArg)
+
+
+arr.forEach(function(item,index){})
+ */
 
 // 함수 선언문 vs. 함수 (표현)식
+function aa(){
+
+}
+
+const bb = function (){}
 
 
 // 즉시 실행 함수 (표현)식
+
 // Immediately Invoked Function Expression
 let IIFE;
+
+
+//  var 함수 스코프
+//  let, const  블록 스코프 
+
+
+
+
+const MASTER = (function(){ // parameter
+
+
+  const KEY = ''
+
+  
+  
+ 
+  
+
+})() // arguments
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
