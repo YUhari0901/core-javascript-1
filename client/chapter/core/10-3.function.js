@@ -1,6 +1,21 @@
 /* ---------------------------------------------------------------------- */
 /* Functions → Arrow                                                      */
 /* ---------------------------------------------------------------------- */
+
+const user = {
+  sayHi(){
+
+  },
+  greeting: function(){
+
+  }
+}
+
+button.addEventListener('click',(e)=>{
+  
+  e.target.style.background = 'red'
+})
+
 /* 
 let arr = [1,2,3,4];
 
@@ -104,7 +119,7 @@ pow(2,53) // 9007199254740992
 let repeat; 
 
 
-repeat('hello😘',3) // 'hello😘hello😘hello😘'
+repeat('hello😘',3) //  'hello😘hello😘hello😘'
 
 
 
