@@ -146,8 +146,14 @@ const bb = function (){}
 
 
 // 즉시 실행 함수 (표현)식
-
 // Immediately Invoked Function Expression
+
+// 함수가 선언 됨과 동시에 실행되는 것을 말합니다.
+// JavaScript 함수는 그 자체로 값(literal)
+// 함수 값을 즉시 실행 (이름 호출 없이)
+
+//  모듈 프로그래맹이 없던 시절 ........
+
 let IIFE;
 
 
@@ -155,30 +161,40 @@ let IIFE;
 //  let, const  블록 스코프 
 
 
+// 너 getNode 이거 나가 
+
+// getNode 받아 
+
+const MASTER = (function($){ // parameter
 
 
-const MASTER = (function(){ // parameter
+  const KEY = 'alcls@#@!$%'
+
+  // 내가 내보내고 싶은 항목들만 내보낼꺼야 
+  //  모듈로서의 활용 
+  //  정보 은닉화 incapsulation : 외부의 접근을 차단
+  // 일부 정보만 노출 
 
 
-  const KEY = ''
-
+  // console.log($('.first'));
   
+  return {
+    getKey: function (){
+      return KEY
+    }
+  }
   
- 
-  
 
-})() // arguments
+})(getNode) // arguments
 
 
-
-
-
+function getNode(node){
+  return document.querySelector(node)
+}
 
 
 
-
-
-
+console.log(MASTER.getKey());
 
 
 
