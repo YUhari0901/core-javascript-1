@@ -2,6 +2,9 @@
 /* For Of Loop                                                            */
 /* ---------------------------------------------------------------------- */
 
+
+
+
 // String, Array, Array-like  =  iterable
 
 const arrayLike = {
@@ -117,31 +120,28 @@ const randomUser = {
 // - 성능 비교 진단
 
 /* 
-for(let key in randomUser){
-
-  let L1 = randomUser[key];
-  
-  if(({}).hasOwnProperty.call(randomUser,key)){
-    console.log('L1 : ' ,key);
-
+for(let value in randomUser){
+  if(Object.prototype.hasOwnProperty.call(randomUser,value)){
+    const L1 = randomUser[value];
+    console.log('Level 1 : ' + value);
     if(typeof L1 === 'object'){
-
-      for(let key in L1){
-
-        let L2 = L1[key];
-        if(({}).hasOwnProperty.call(randomUser,key)){
-
-          console.log('\t L2 : ' ,key);
-
+      for(let value in L1){
+        if(Object.prototype.hasOwnProperty.call(L1,value)){
+          const L2 = L1[value];
+          console.log('\tLevel 2 : ' + value);
           if(typeof L2 === 'object'){
-            
+            for(let value in L2){
+              if(Object.prototype.hasOwnProperty.call(L2,value)){
+                const L3 = L2[value];
+                console.log('\t\tLevel 3 : ' + value);
+              }
+            }
           }
-        }
-      }
+        } 
+      } 
     }
-
   }
-  
+}
 }
  */
 
