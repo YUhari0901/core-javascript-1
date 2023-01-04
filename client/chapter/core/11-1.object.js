@@ -160,7 +160,31 @@ let result = getPropertiesList(authUser)
 
 // 유틸 함수를 만들 수 있을것 같은데 .. ?
 
-removeProperty()
+// 1. 함수 이름 정하기
+// 2. 인수(arguments)와 인자(parameter) 정하기
+// 3. 확인하기(validation)
+// 4. 리턴값 (return)
+
+
+function removeProperty(object,key){
+  
+  if(!(typeof object === 'object')){
+    // throw
+  }
+
+
+  
+   object[key] = null;
+}
+
+
+
+function deleteProperty(object,key){
+  delete object[key]
+}
+
+
+deleteProperty(authUser,'uid')
 
 
 
@@ -172,16 +196,27 @@ let email = 'seonbeom2@euid.dev';
 let authorization = 'Lv. 99';
 let isLogin = true;
 
+// shorthand property
+const student = { name, email, authorization, isLogin }
+
 
 // 프로퍼티 이름 제한
 // 예약어: class, if, switch, for, while, ...
 
 
+
 // 객체가 프로퍼티를 포함하는 지 유무를 반환하는 유틸리티 함수 isEmptyObject 작성
-function isEmptyObject() {
-  return null;
+// 객체의 키를 배열로 바꾸고 그 배열의 갯수가 0 이면 ? true : false
+
+function isEmptyObject(object) {
+  
+  // return Object.keys(object).length === 0 ? true : false
+  return Object.keys(object).length === 0;
+
 }
 
+
+isEmptyObject(authUser)  
 
 
 
