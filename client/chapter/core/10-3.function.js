@@ -116,6 +116,8 @@ let pow = (numeric, powerCount) => {
     return result;
 };
 
+                                                                                    // acc *= numeric
+                                                                                    // acc += text
 
 let powExpression = (numeric, powerCount) => Array(powerCount).fill(null).reduce(acc=>acc * numeric,1)
 
@@ -136,11 +138,12 @@ let repeat = (text, repeatCount) => {
 
 
 
-let repeatExpression = ()=>{
-  
-}
+let repeatExpression = (text, repeatCount)=> Array(repeatCount).fill(null).reduce(acc=> acc + text,'')
+
 
 // repeat('hello😘',3) //  'hello😘hello😘hello😘'
+
+
 
 
 
