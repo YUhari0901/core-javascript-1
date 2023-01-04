@@ -209,14 +209,119 @@ const student = { name, email, authorization, isLogin }
 // 객체의 키를 배열로 바꾸고 그 배열의 갯수가 0 이면 ? true : false
 
 function isEmptyObject(object) {
+
+  // if(Object.keys(object).length){
+  //   return true
+  // }else{
+  //   return false
+  // }
   
   // return Object.keys(object).length === 0 ? true : false
-  return Object.keys(object).length === 0;
+  return getPropertiesList(object).length === 0;
 
 }
 
+const empty = {}
 
-isEmptyObject(authUser)  
+console.log( isEmptyObject(empty) );
+
+
+
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 430 
+}
+
+//  월급의 총 합을 구하세요.
+
+
+/* 배열 구조 분해 할당  destructuring assignments  */
+let total = 0;
+for(let [key, value] of Object.entries(salaries) ){
+
+  console.log(key);
+  // console.log(keyValue);
+  // let key = keyValue[0];
+  // let value = keyValue[1];
+
+  
+
+  total += value;
+}
+
+
+// console.log( total );
+
+/* -------------------------------------------------------------------------- */
+/* 배열 구조 분해 할당  destructuring assignments                                     */
+/* -------------------------------------------------------------------------- */
+
+let color = ['#ff0000','#2b00ff','#00ff2f'];
+
+// const COLOR_RED = color[0]
+// const COLOR_BLUE = color[1]
+// const COLOR_GREEN = color[2]
+
+
+const [,,COLOR_GREEN]  = color
+
+console.log(COLOR_GREEN);
+
+// 발췌 
+
+// console.log(green);
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/* 객체 구조 분해 할당  destructuring assignments                                     */
+/* -------------------------------------------------------------------------- */
+
+
+/* 
+
+
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 430 
+}
+
+*/
+
+const { John, Ann, Pete } = salaries;
+
+const element = {
+  width: 500,
+  height: 600
+}
+
+function getElementWidth(option,node){
+
+  const {width,height} = element;
+  
+  width
+}
+
+ 
+
+ console.log(Ann);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
