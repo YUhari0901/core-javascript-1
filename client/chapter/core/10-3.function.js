@@ -1,7 +1,7 @@
 /* ---------------------------------------------------------------------- */
 /* Functions → Arrow                                                      */
 /* ---------------------------------------------------------------------- */
-
+/* 
 const user = {
   sayHi(){
 
@@ -15,7 +15,7 @@ button.addEventListener('click',(e)=>{
   
   e.target.style.background = 'red'
 })
-
+ */
 /* 
 let arr = [1,2,3,4];
 
@@ -108,18 +108,39 @@ console.log(user.totalGrades());
 /* 다음 함수를 작성해봅니다. -------------------------------------------------- */
 
 // pow(numeric: number, powerCount: number): number;
-let pow; 
+let pow = (numeric, powerCount) => {
+    let result = 1;
+    for(let i = 0; i < powerCount; i++){
+      result *= numeric
+    }
+    return result;
+};
+
+
+let powExpression = (numeric, powerCount) => Array(powerCount).fill(null).reduce(acc=>acc * numeric,1)
 
 
 
-pow(2,53) // 9007199254740992
+// pow(2,53) // 9007199254740992
+
 
 
 // repeat(text: string, repeatCount: number): string;
-let repeat; 
+let repeat = (text, repeatCount) => {
+  let result = '';
+  for(let i = 0; i < repeatCount; i++){
+    result += text;
+  }
+  return result;
+}; 
 
 
-repeat('hello😘',3) //  'hello😘hello😘hello😘'
+
+let repeatExpression = ()=>{
+  
+}
+
+// repeat('hello😘',3) //  'hello😘hello😘hello😘'
 
 
 
