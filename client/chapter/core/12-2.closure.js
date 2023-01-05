@@ -36,6 +36,7 @@ const ufo = earth()
 
 
 
+
 function handler(){
 
   let isClicked = false;

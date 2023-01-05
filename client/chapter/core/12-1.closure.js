@@ -10,13 +10,17 @@
 
 
 
+
 function first(){
   let x = 10;
-  return ()=>{
+  function second (){
     let y = 30;
     return x + y;
   }
+  return second
 }
+
+
 
 const value = first();
 
