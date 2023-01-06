@@ -177,8 +177,17 @@ console.log(age);
 
 /* string ←→ array 변환 ------------------------------------------------- */
 
-// split
-// join
+let str = '성찬 보경 일범 세민 형진 주현';
+
+// split :  문자  →  배열 
+let nameArray = str.split(' ');
+console.log(nameArray);
+
+
+// join : 배열 → 문자
+console.log( nameArray.join(' / ') );
+
+
 
 
 
