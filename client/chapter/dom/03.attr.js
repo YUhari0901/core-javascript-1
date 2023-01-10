@@ -110,6 +110,20 @@ console.assert( getAttr('.first','class') === 'first' );
 
 
 
+let result = attr('.second','id');
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
