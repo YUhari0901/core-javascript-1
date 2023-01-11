@@ -22,6 +22,9 @@ div{
  
 }
 
+.first{
+  /* background-color: dodgerblue !important; */
+}
 span{
   display: inline-block;
   transition:all .5s;

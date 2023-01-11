@@ -43,7 +43,48 @@ removeClass('.first','aaa')
 // - style.cssText - "style" 속성 전체에 대응하므로 스타일 전체에 대한 문자열 저장
 
 
+first.style.backgroundColor = 'red';
+
+
+console.log( first.style.fontSize );
+
 /* 계산된 스타일 읽기 ------------------------------------------------------- */
+
+
+let size = getComputedStyle(first).margin;
+
+console.log( size );
+
+
+
+// 자바스크립트에선 객체의 key, value 값을 변수로 받기 위해서는 . 사용 x 
+// [ ] 각괄호 표기법 
+function getCss(node,prop){
+  if(typeof node === 'string'){
+    node = getNode(node);
+  }
+
+  if(!(prop in document.body.style)){
+    SyntaxError('getCSS 함수의 두 번째 인자인 prop은 유효한 css 속성이 아닙니다.')
+  }
+  return getComputedStyle(node)[prop]
+  
+}
+
+
+
+                          // 정확한 css 속성인지 ?
+console.log( getCss('.first','font-size') );
+
+
+
+
+
+
+
+
+  // 
+// setCss('.first','color','red')  // red
 
 // - getComputedStyle(element, [pseudoElement]) `읽기 전용`
 
