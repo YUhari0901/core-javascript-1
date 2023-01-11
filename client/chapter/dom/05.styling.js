@@ -72,7 +72,12 @@ console.log( size );
 
 
 css('.first','font-size','100px'); // set
-css('.first','font-size'); // get
+
+css('.first','font-size')
+
+setTimeout(() => {
+  console.log();
+}, 1000);
 
 
 
