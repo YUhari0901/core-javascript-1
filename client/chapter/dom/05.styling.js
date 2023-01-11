@@ -56,35 +56,62 @@ let size = getComputedStyle(first).margin;
 console.log( size );
 
 
-
 // 자바스크립트에선 객체의 key, value 값을 변수로 받기 위해서는 . 사용 x 
 // [ ] 각괄호 표기법 
+
+// 대상에게 속성을 받아서 이 속성 값이 뭐야~?  라는걸 보여줘야함.
 function getCss(node,prop){
   if(typeof node === 'string'){
     node = getNode(node);
   }
 
   if(!(prop in document.body.style)){
-    SyntaxError('getCSS 함수의 두 번째 인자인 prop은 유효한 css 속성이 아닙니다.')
+    syntaxError('getCSS 함수의 두 번째 인자인 prop은 유효한 css 속성이 아닙니다.')
   }
   return getComputedStyle(node)[prop]
-  
 }
 
 
 
+// 대상에게 원하는 css 속성을 추가 = set
+function setCss(node,prop,value){
+  if(typeof node === 'string'){
+    node = getNode(node);
+  }
+  if(!(prop in document.body.style)){
+    syntaxError('setCSS 함수의 두 번째 인자인 prop은 유효한 css 속성이 아닙니다.')
+  }
+  if(!value){
+    syntaxError('setCSS 함수의 세 번째 인자는 필수값 입니다.')
+  }
+  
+  node.style[prop] = value;
+
+}
+
+
+
+
+
+css('.first','font-size','100px'); // set
+css('.first','font-size'); // get
+
+
+
+
+
+
+
+
+// let result = getCss('.first','font-size');
+
                           // 정확한 css 속성인지 ?
-console.log( getCss('.first','font-size') );
-
-
-
-
 
 
 
 
   // 
-// setCss('.first','color','red')  // red
+setCss('.first','color','blue')  // red
 
 // - getComputedStyle(element, [pseudoElement]) `읽기 전용`
 
