@@ -26,15 +26,32 @@ function getInputValue(node){
 }
 
 
+// const sum = (valueA,valueB) => valueA + valueB;
+
+function sum(valueA,valueB){
+  return valueA + valueB;
+}
+
+
+function clearContents(node){
+  if(typeof node === 'string') node = getNode(node);
+  node.textContent = '';
+}
+
 
 function handler(e){
   e.preventDefault();
 
   let firstValue = +getInputValue(firstInput);
   let secondValue = +getInputValue(secondInput);
+  let total = sum(firstValue, secondValue)
+
+  console.log( total );
+
   
-  console.log(firstValue, secondValue);
-  
+  clearContents('.result');
+
+  insertLast('.result',total);
   
 }
 

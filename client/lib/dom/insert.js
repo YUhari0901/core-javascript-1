@@ -15,7 +15,6 @@ function insertFirst(node, text) {
 }
 
 
-
 function insertLast(node, text) {
   if (typeof node === 'string') node = getNode(node);
   if (node.nodeType !== document.ELEMENT_NODE) {
