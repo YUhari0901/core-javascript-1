@@ -17,6 +17,7 @@
 const firstInput = getNode('#firstNumber');
 const secondInput = getNode('#secondNumber');
 const done = getNode('#done');
+const result = getNode('.result');
 
 
 function getInputValue(node){
@@ -46,18 +47,34 @@ function handler(e){
   let secondValue = +getInputValue(secondInput);
   let total = sum(firstValue, secondValue)
 
-  console.log( total );
 
   
-  clearContents('.result');
+  clearContents(result);
 
-  insertLast('.result',total);
+  insertLast(result,total);
   
 }
 
 
+
+function inputHandler(){
+  let firstValue = +getInputValue(firstInput);
+  let secondValue = +getInputValue(secondInput);
+  let total = sum(firstValue, secondValue)
+
+
+  
+  clearContents(result);
+
+  insertLast(result,total);
+}
+
+
+
 done.addEventListener('click',handler)
 
+firstInput.addEventListener('change',inputHandler)
+secondInput.addEventListener('change',inputHandler)
 
 
 
