@@ -16,11 +16,11 @@ const rollingDiceButton = getNode('.buttonGroup > button:nth-child(1)');
 
 
 
+let stopAnimation;
 
 const handlerRollingDice = () => {
 
-  diceAnimation()
-  
+  stopAnimation = setInterval(diceAnimation,100)
 
 }
 
