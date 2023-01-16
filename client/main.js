@@ -2,6 +2,8 @@
 
 import { 
   diceAnimation, 
+  disableElement, 
+  enableElement, 
   getNode, 
   getNodes
  } from "./lib/index.js";
@@ -44,12 +46,16 @@ const handlerRollingDice = (() => {
     if(!isRolling){
       // console.log('첫번째 클릭');
       stopAnimation = setInterval(diceAnimation,100)
-      recordButton.disabled = true;
+      
+      disableElement(recordButton)
+      disableElement(resetButton)
+      
       
     }else{
       // console.log('두번째 클릭');
       clearInterval(stopAnimation);
-      recordButton.disabled = false;
+      enableElement(recordButton)
+      enableElement(resetButton)
     }
   
     isRolling = !isRolling;

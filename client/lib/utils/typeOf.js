@@ -6,6 +6,10 @@ export function isNumericString(data){
 
 
 
+export function isElement(node){
+  return node.nodeType === document.ELEMENT_NODE
+}
+
 
 
 
