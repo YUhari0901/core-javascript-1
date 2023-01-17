@@ -8,6 +8,7 @@
   4: complete // 완료 
   */
 
+  
 
 // xhrData 함수 만들기 method, url 
 
@@ -21,7 +22,7 @@ function xhrData({
     'Content-Type':'application/json',
     'Access-Control-Allow-Origin': '*',
   },
-}){
+} = {}){
 
   // const {url,method,body} = options;
 
@@ -70,6 +71,7 @@ xhrData({
 
 
 
+// shorthand property
 
 xhrData.get = (url,onSuccess,onFail) =>{
   xhrData({
@@ -94,8 +96,32 @@ xhrData.post = (url,body,onSuccess,onFail) =>{
 
 
 
-xhrData.get(
-  'https://jsonplaceholder.typicode.com/users',
+xhrData.put = (url,body,onSuccess,onFail) =>{
+  xhrData({
+    method:'PUT',
+    body,
+    url,
+    onSuccess,
+    onFail
+  })
+}
+
+
+
+xhrData.delete = (url,body,onSuccess,onFail) =>{
+  xhrData({
+    method:'DELETE',
+    url,
+    onSuccess,
+    onFail
+  })
+}
+
+
+
+/* 
+xhrData.delete(
+  'https://jsonplaceholder.typicode.com/users/3',
   (result)=>{
     console.log(result);
   },
@@ -104,11 +130,7 @@ xhrData.get(
   }
 )
 
-
-
-
-
-
+ */
 
 /* 
 xhrData('POST','https://jsonplaceholder.typicode.com/users',{
