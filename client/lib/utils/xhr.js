@@ -11,13 +11,33 @@
 
 // xhrData 함수 만들기 method, url 
 
-function xhrData(method,url,body){
+function xhrData({
+  url = '',
+  method = 'GET',
+  body = null,
+  onSuccess = null,
+  headers = {
+    'Content-Type':'application/json',
+    'Access-Control-Allow-Origin': '*',
+  },
+  
+}){
 
-  const xhr = new XMLHttpRequest();
   
 
+  // const {url,method,body} = options;
+
+  const xhr = new XMLHttpRequest();
+  console.log(xhr);
   // 비동기 통신 오픈
-  xhr.open(method,url)
+  xhr.open( method, url)
+
+
+  
+  // Object.entries(headers).forEach(([key,value])=>{
+  //   xhr.setRequestHeader(key,value);
+  // })
+
 
 
   xhr.addEventListener('readystatechange',()=>{
@@ -38,13 +58,13 @@ function xhrData(method,url,body){
 
 
 xhrData({
-  url:'https://jsonplaceholder.typicode.com/users',
-  method:'GET',
-  body:null,
-  headers:{
-    'Content-Type':'application/json'
+  url:'https://jsonplaceholder.typicode.com/users/1',
+  onSuccess: ()=>{
+
   }
 })
+
+
 
 
 /* 
