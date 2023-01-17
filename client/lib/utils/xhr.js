@@ -20,9 +20,6 @@ function xhrData(method,url,body){
   xhr.open(method,url)
 
 
-  
-
-
   xhr.addEventListener('readystatechange',()=>{
     const {status,readyState,response} = xhr; // 객체 구조 분해 할당 
 
@@ -40,7 +37,17 @@ function xhrData(method,url,body){
 }
 
 
+xhrData({
+  url:'https://jsonplaceholder.typicode.com/users',
+  method:'GET',
+  body:null,
+  headers:{
+    'Content-Type':'application/json'
+  }
+})
 
+
+/* 
 xhrData('POST','https://jsonplaceholder.typicode.com/users',{
   "name": "kindtiger",
   "username": "seonbeom",
@@ -63,7 +70,7 @@ xhrData('POST','https://jsonplaceholder.typicode.com/users',{
     "bs": "harness real-time e-markets"
   }
 })
-
+ */
 
 
 
